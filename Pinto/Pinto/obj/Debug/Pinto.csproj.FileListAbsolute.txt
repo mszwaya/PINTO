@@ -1,0 +1,12 @@
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\bin\Debug\Pinto.exe.config
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\bin\Debug\Pinto.exe
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\bin\Debug\Pinto.pdb
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\bin\Debug\log4net.dll
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\bin\Debug\log4net.xml
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\obj\Debug\Pinto.MainForm.resources
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\obj\Debug\Pinto.Properties.Resources.resources
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\obj\Debug\Pinto.Splash_Screen.resources
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\obj\Debug\Pinto.csproj.GenerateResource.Cache
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\obj\Debug\Pinto.exe
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\obj\Debug\Pinto.pdb
+C:\Users\mszwaya.ROSE\documents\visual studio 2012\Projects\PINTO\Pinto\obj\Debug\Pinto.csprojResolveAssemblyReference.cache

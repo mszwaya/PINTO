@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Sandbox">
+  <DataContextMoniker Name="/SandboxDataContext" />
+  <nestedChildShapes>
+    <classShape Id="44a4b2a1-3ae1-4d04-b49d-ccd5c05d5bc4" absoluteBounds="4.625, 2.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SandboxDataContext/PS_LocationTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf2a9ec8-ff91-40ed-97b5-0fb84d27e159" absoluteBounds="4.64, 3.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e70453b-8e43-4729-a6d9-dd349c458da7" absoluteBounds="1, 0.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/SandboxDataContext/PS_Gravity_Pipe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1c00edf-19bc-4e68-8717-269e8db1e8bf" absoluteBounds="1.0150000000000001, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 3.02005126953125); (3 : 3.02005126953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SandboxDataContext/PS_LocationTable/PS_LocationTable_PS_Gravity_Pipe" />
+      <nodes>
+        <classShapeMoniker Id="44a4b2a1-3ae1-4d04-b49d-ccd5c05d5bc4" />
+        <classShapeMoniker Id="1e70453b-8e43-4729-a6d9-dd349c458da7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="19e22f8c-9ba0-4516-b8b9-7c748d07a99c" absoluteBounds="1, 4.375, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/SandboxDataContext/PS_RawCycleData_Neptune" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2a734b3-b9d0-4c20-bc46-e27edf9d5dd0" absoluteBounds="1.0150000000000001, 4.835, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 4.64024983723958); (3 : 4.64024983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SandboxDataContext/PS_LocationTable/PS_LocationTable_PS_RawCycleData_Neptune" />
+      <nodes>
+        <classShapeMoniker Id="44a4b2a1-3ae1-4d04-b49d-ccd5c05d5bc4" />
+        <classShapeMoniker Id="19e22f8c-9ba0-4516-b8b9-7c748d07a99c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5b3405fc-f2ee-4f96-8085-533d570ee598" absoluteBounds="7.875, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SandboxDataContext/PS_StageStorage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67dc59e1-ed77-4ee9-83db-3c5fa159d677" absoluteBounds="7.8900000000000006, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.625 : 3.82774983723958); (8.875 : 3.82774983723958); (8.875 : 2.70359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SandboxDataContext/PS_LocationTable/PS_LocationTable_PS_StageStorage" />
+      <nodes>
+        <classShapeMoniker Id="44a4b2a1-3ae1-4d04-b49d-ccd5c05d5bc4" />
+        <classShapeMoniker Id="5b3405fc-f2ee-4f96-8085-533d570ee598" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="681d8336-f356-4fcd-926e-6921f934b1b7" absoluteBounds="7.5, 5.25, 2, 1.9631982421875">
+      <DataClassMoniker Name="/SandboxDataContext/PS_Location_Summary_Table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f78f6ce6-db34-43db-99d2-73ca837da5a3" absoluteBounds="7.515, 5.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

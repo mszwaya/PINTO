@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinto", "Pinto\Pinto.csproj", "{A43F5656-35DC-4AB3-A3B2-764750880DAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A43F5656-35DC-4AB3-A3B2-764750880DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A43F5656-35DC-4AB3-A3B2-764750880DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A43F5656-35DC-4AB3-A3B2-764750880DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A43F5656-35DC-4AB3-A3B2-764750880DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

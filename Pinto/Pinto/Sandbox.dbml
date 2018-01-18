@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SANDBOX" Class="SandboxDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BESDBTEST1;Initial Catalog=SANDBOX;Persist Security Info=True;User ID=GIS" SettingsObjectName="Pinto.Properties.Settings" SettingsPropertyName="SANDBOXConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="GIS.PS_LocationTable" Member="PS_LocationTables">
+    <Type Name="PS_LocationTable">
+      <Column Name="Location" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LeadPump_gpm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActiveWWVol_gal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GravitySystemStorage_gal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OverflowElevation" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="station_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Asset ID]" Member="Asset_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PS_LocationTable_PS_Gravity_Pipe" Member="PS_Gravity_Pipes" ThisKey="Location" OtherKey="Location" Type="PS_Gravity_Pipe" />
+      <Association Name="PS_LocationTable_PS_RawCycleData_Neptune" Member="PS_RawCycleData_Neptunes" ThisKey="Location" OtherKey="Location" Type="PS_RawCycleData_Neptune" />
+      <Association Name="PS_LocationTable_PS_StageStorage" Member="PS_StageStorages" ThisKey="Location" OtherKey="Location" Type="PS_StageStorage" />
+    </Type>
+  </Table>
+  <Table Name="GIS.PS_Gravity_Pipes" Member="PS_Gravity_Pipes">
+    <Type Name="PS_Gravity_Pipe">
+      <Column Name="Location" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MLinkID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USNode" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="DSNode" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="PipeFlowType" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DiamWidth" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="USIE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DSIE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Length" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="PS_LocationTable_PS_Gravity_Pipe" Member="PS_LocationTable" ThisKey="Location" OtherKey="Location" Type="PS_LocationTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="GIS.PS_RawCycleData_Neptune" Member="PS_RawCycleData_Neptunes">
+    <Type Name="PS_RawCycleData_Neptune">
+      <Column Name="Location" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="station_id" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pump_id" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cycle_change_time" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="onoff_state" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="record_status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="delta_t" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="pumpTime" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fillTime" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DuplicateCycle" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AddOnCycle" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AddOffCycle" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeletePrevCycle" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="multiPump" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="shortCycle" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Flow_gpm" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="PS_LocationTable_PS_RawCycleData_Neptune" Member="PS_LocationTable" ThisKey="Location" OtherKey="Location" Type="PS_LocationTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="GIS.PS_StageStorage" Member="PS_StageStorages">
+    <Type Name="PS_StageStorage">
+      <Column Name="Location" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StageElev" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CumulativeVolume" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="AssetID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PS_LocationTable_PS_StageStorage" Member="PS_LocationTable" ThisKey="Location" OtherKey="Location" Type="PS_LocationTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="GIS.PS_Location_Summary_Table" Member="PS_Location_Summary_Tables">
+    <Type Name="PS_Location_Summary_Table">
+      <Column Name="Location" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Asset ID]" Member="Asset_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Lead Pump (gpm)]" Member="Lead_Pump__gpm_" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="[Wetwell Vol. (gal)]" Member="Wetwell_Vol___gal_" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="[Gravity Storage (gal)]" Member="Gravity_Storage__gal_" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="[Overflow Elev. (ft)]" Member="Overflow_Elev___ft_" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
